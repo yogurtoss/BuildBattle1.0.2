@@ -1,0 +1,38 @@
+main: plugily.projects.buildbattle.Main
+version: ${project.version}
+name: BuildBattle
+softdepend: [Vault, PlaceholderAPI, Citizens, Parties, Spigot-Party-API-PAF, PartyAndFriends]
+authors: [Tigerpanzer, 2Wild4You, Plajer, TomTheDeveloper]
+api-version: 1.13
+
+commands:
+  buildbattle:
+    usage: /buildbattle
+    description: The main command
+    aliases: [buildb, bb]
+  buildbattleadmin:
+    aliases: [buildba, bba]
+
+permissions:
+  buildbattle.admin.*:
+    default: op
+    children:
+      buildbattle.updatenotify: true
+      buildbattle.admin: true
+      buildbattle.admin.sign.create: true
+      buildbattle.admin.sign.break: true
+      buildbattle.admin.stopgame: true
+      buildbattle.admin.addnpc: true
+      buildbattle.admin.addsign: true
+      buildbattle.admin.reload: true
+      buildbattle.admin.forcestart: true
+      buildbattle.admin.forcestart.theme: true
+      buildbattle.admin.addplot: true
+      buildbattle.admin.removeplot: true
+      buildbattle.admin.plotwand: true
+      buildbattle.admin.list: true
+      buildbattle.admin.delete: true
+      buildbattle.admin.create: true
+      buildbattle.admin.settheme: true
+      buildbattle.admin.supervotes.manage: true
+      buildbattle.command.bypass: true
